@@ -1,0 +1,74 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+{'dog_02.jpg': ['dog'], 'tukano_01.jpg': ['tukano'], 'barn_owl_01.jpg': ['barn owl'], 'dog_01.jpg': ['dog']}
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     dog_02.jpg  label:                        dog
+ 2 key:                  tukano_01.jpg  label:                     tukano
+ 3 key:                barn_owl_01.jpg  label:                   barn owl
+ 4 key:                     dog_01.jpg  label:                        dog
+{'dog_02.jpg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 1], 'tukano_01.jpg': ['tukano', 'orange', 0], 'barn_owl_01.jpg': ['barn owl', 'acorn', 0], 'dog_01.jpg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 1]}
+
+     MATCH:
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                    dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+ NOT A MATCH:
+
+                 tukano_01.jpg: 
+Real:                     tukano   Classifier:                         orange
+
+               barn_owl_01.jpg: 
+Real:                   barn owl   Classifier:                          acorn
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                    dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                 tukano_01.jpg: 
+Real:                     tukano   Classifier:                         orange  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               barn_owl_01.jpg: 
+Real:                   barn owl   Classifier:                          acorn  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match: 50.0
+pct_correct_dogs: 100.0
+pct_correct_breed: 100.0
+pct_correct_notdogs: 100.0
+
+** Total Elapsed Runtime: 0:0:0
